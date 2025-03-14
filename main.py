@@ -8,20 +8,18 @@ from aiogram.enums import ParseMode
 from aiogram.filters import Command
 from dotenv import load_dotenv
 
+from handlers.gpt_random import gpt_random_router
+
 load_dotenv()
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 
 dp = Dispatcher()
+dp.include_router(gpt_random_router)
 
 
 @dp.message(Command('start'))
 async def command_start_handler(message: types.Message):
     await message.answer(f"Hello, {html.bold(message.from_user.full_name)}!")
-
-
-@dp.message(Command('hello'))
-async def command_hello(message: types.Message):
-    await message.answer("Hello, let's start!")
 
 
 async def main():
