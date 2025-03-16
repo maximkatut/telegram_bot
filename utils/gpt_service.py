@@ -43,6 +43,9 @@ class ChatGPTService:
         self.add_assistant_message(assistant_reply)
         return assistant_reply
 
+    def clear_history(self):
+        self.history = []
+
     @staticmethod
     def get_random_fact_response():
         completion = openai.chat.completions.create(
