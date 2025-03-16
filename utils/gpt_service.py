@@ -50,7 +50,7 @@ class ChatGPTService:
             messages=[
                 {
                     "role": "user",
-                    "content": "Tell me some random fact, it should be one sentence"
+                    "content": "Tell me some random fact"
                 }
             ]
         )

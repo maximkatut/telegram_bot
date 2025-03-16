@@ -6,3 +6,4 @@ class MyCallback(CallbackData, prefix='my'):
 
 
 random_callback = MyCallback(name='random')
+gpt_question_callback = MyCallback(name='gpt')

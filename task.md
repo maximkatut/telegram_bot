@@ -1,158 +1,150 @@
-# Проект "Telegram/ChatGPT"
+# Project "Telegram/ChatGPT"
 
-## Условия:
+## Conditions:
 
-- Проект должен представлять собой Telegram-бота с подключением ChatGPT.
+- The project should be a Telegram bot connected to ChatGPT.
 
-- В проекте должны быть реализованы функциональности из 4 обязательных пунктов и 2 пунктов по выбору.
+- The project must implement functionalities from 4 mandatory points and 2 optional points.
 
-- Код проекта должен соблюдать стандарт [PEP8](https://peps.python.org/pep-0008/)
+- The project code must comply with the [PEP8](https://peps.python.org/pep-0008/) standard.
 
-- Код должен быть отказоустойчивым
+- The code should be fault-tolerant.
 
-- Разрешено использовать любую библиотеку для Telegram API
+- Any library for the Telegram API is allowed.
 
-### Токен openAI
+### OpenAI Token
 
-Ключ для всей группы нужно запросить у куратора в pumble.
+The key for the entire group should be requested from the curator in Pumble.
 
-### Как сдать проект?
+### How to submit the project?
 
-В чате будет ссылка на форму куда нужно будет добавить свое Имя (как в pumble) и ссылку на GitHub.
-> Важно! Если опубликовать на GitHub токен openAI, он будет автоматически отозван/заблокирован через 10-15 минут.
+In the chat, there will be a link to a form where you need to add your Name (as in Pumble) and a link to GitHub.
 
-### Будет плюсом, если в проекте будет:
+> Important! If you publish the OpenAI token on GitHub, it will be automatically revoked/blocked within 10-15 minutes.
 
-- Наличие файла readme
-- Наличие файла requirements.txt
-- Использование ConversationHandler
-- Использование переменных окружения (для хранения токенов)
-- Логирование
-- Развёртывание проекта на сервере (ngrok, pythonanywhere, glitch или др.)
-- Использование технологий, не рассматриваемых в первом модуле
+### Bonus points if the project includes:
 
-### Консультации по проекту
+- A README file
+- A requirements.txt file
+- Use of ConversationHandler
+- Use of environment variables (for storing tokens)
+- Logging
+- Deployment of the project on a server (ngrok, pythonanywhere, glitch, or others)
+- Use of technologies not covered in the first module
 
-На проект выделяется 3 лекции для ответов на вопросы, ревю.
+### Project consultations
 
-Их можно использовать последовательно сразу все или разделить на части.
-Например:
+Three lectures are allocated for answering questions and reviews.
 
-- провести 2 лекции,
-- начать модуль 2, лекции 1 и 2 (они теоретические),
-- потом провести финальную лекцию по проекту.
+They can be used consecutively all at once or divided into parts. For example:
 
-### Помощь с реализацей
+- Conduct 2 lectures,
+- Start module 2, lectures 1 and 2 (they are theoretical),
+- Then conduct the final lecture on the project.
 
-1. Выдача токена openAI для группы. Для тестов используйте дешевую версию: gpt 3.5 или GPT-4o mini.
-2. Есть подготовленный темплейт проекта, разберем его на первой лекции.
-3. На первой лекции, будет показы первые шаги работы. Реализация задания 1 и 2. Дальше самостоятельная работа.
+### Implementation assistance
+
+1. Issuing the OpenAI token for the group. For tests, use the cheaper version: gpt 3.5 or GPT-4o mini.
+2. There is a prepared project template, which will be reviewed in the first lecture.
+3. In the first lecture, the first steps of work will be shown. Implementation of tasks 1 and 2. Further independent work.
 
 ---
 
-# Задачи
+# Tasks
 
-## Обязательные
+## Mandatory
 
-### 1. *"Рандомный факт"*
+### 1. _"Random Fact"_
 
-Телеграм-бот должен обрабатывать команду /random.
-При обработке команды он отсылает заранее заготовленное изображение
-и делает запрос к ChatGPT с заранее заготовленным промптом.
-Ответ ChatGPT нужно получить и передать пользователю.
-К сообщению должна быть прикреплена кнопка "Закончить", нажатие на которую
-работает так же, как команда /start.
-И кнопка "Хочу ещё факт", нажатие на которую
-работает так же, как команда /random
+The Telegram bot should handle the /random command.
+When processing the command, it sends a pre-prepared image
+and makes a request to ChatGPT with a pre-prepared prompt.
+The ChatGPT response should be received and sent to the user.
+The message should have an attached "Finish" button, which works the same as the /start command when pressed.
+And a "Want another fact" button, which works the same as the /random command when pressed.
 
-### 2. *"ChatGPT интерфейс"*
+### 2. _"ChatGPT Interface"_
 
-Телеграм-бот должен обрабатывать команду /gpt.
-При обработке команды он отсылает заранее заготовленное изображение
-и делает запрос к ChatGPT, передавая ему
-текст полученного сообщения. Ответ ChatGPT нужно получить и
-передать пользователю текстовым сообщением
+The Telegram bot should handle the /gpt command.
+When processing the command, it sends a pre-prepared image
+and makes a request to ChatGPT, passing the text of the received message. The ChatGPT response should be received and sent to the user as a text message.
 
-### 3. *"Диалог с известной личностью"*
+### 3. _"Dialogue with a Famous Person"_
 
-Телеграм-бот должен обрабатывать команду /talk.
-При обработке команды бот отсылает заранее заготовленное изображение и
-предлагает выбор из нескольких известных личностей,
-используя кнопки. По нажатию кнопки нужно установить промпт выбранной личности.
-Дальнейшие текстовые сообщения от пользователя нужно передавать ChatGPT и
-возвращать его ответы пользователю.
-К ним должна быть прикреплена кнопка "Закончить", нажатие на которую
-работает так же, как команда /start
+The Telegram bot should handle the /talk command.
+When processing the command, the bot sends a pre-prepared image and
+offers a choice of several famous personalities using buttons. By pressing a button, the prompt of the selected personality should be set.
+Further text messages from the user should be passed to ChatGPT and
+its responses returned to the user.
+They should have an attached "Finish" button, which works the same as the /start command when pressed.
 
-### 4. *"Квиз"*
+### 4. _"Quiz"_
 
-Телеграм-бот должен обрабатывать команду /quiz.
-При обработке команды бот отсылает заранее заготовленное изображение
-и предлагает выбор из нескольких тем, используя кнопки.
-После выбора темы, передать запрос ChatGPT и, получив вопрос квиза, передать его
-пользователю. Следующее текстовое сообщение пользователя считается ответом.
-Его нужно передать ChatGPT и получить результат. Результат передать пользователю
-с возможностью задать ещё вопрос на ту же тему, сменить тему или закончить квиз, с помощью кнопок.
-Бот также должен вести счёт правильных ответов и
-отображать вместе с очередным результатом
+The Telegram bot should handle the /quiz command.
+When processing the command, the bot sends a pre-prepared image
+and offers a choice of several topics using buttons.
+After selecting a topic, send a request to ChatGPT and, after receiving a quiz question, send it to the user. The next text message from the user is considered an answer.
+It should be sent to ChatGPT and the result received. The result should be sent to the user
+with the option to ask another question on the same topic, change the topic, or finish the quiz using buttons.
+The bot should also keep track of the number of correct answers and
+display it along with the next result.
 
-### 5. **Тема на выбор** (опциональные)
+### 5. **Optional Topic** (optional)
 
-Выбери две или более идей из предложенных (или придумай свою!):
+Choose two or more ideas from the suggested ones (or come up with your own!):
 
-**"Переводчик"**
+**"Translator"**
 
-Бот предлагает выбрать язык на который нужно перевести текст, используя кнопки.
-После выбора языка пользователь отправляет текст, который нужно перевести.
-Бот использует ChatGPT для перевода текста и отправляет результат пользователю.
-К сообщению должна быть прикреплена кнопка смены языка и кнопка "Закончить", нажатие на которую
-работает так же, как команда /start.
+The bot offers to choose a language to translate the text into using buttons.
+After selecting a language, the user sends the text to be translated.
+The bot uses ChatGPT to translate the text and sends the result to the user.
+The message should have an attached button to change the language and a "Finish" button, which works the same as the /start command when pressed.
 
-**"Голосовой ChatGPT"**
+**"Voice ChatGPT"**
 
-Бот должен принять голосовое сообщение от пользователя. Перевести его в текст
-и отправить ChatGPT. Получив ответ, преобразовать его в голосовое сообщение и
-отправить в виде аудиосообщения пользователю.
+The bot should accept a voice message from the user. Convert it to text
+and send it to ChatGPT. After receiving a response, convert it to a voice message and
+send it as an audio message to the user.
 
-**"Рекомендации по фильмам и книгам"**
+**"Movie and Book Recommendations"**
 
-Бот предлагает выбрать категорию рекомендаций: фильмы, книги, музыка.
-После выбора категории бот запрашивает жанр.
-После получения, формирует запрос и запрашивает у ChatGPT рекомендации
-и отправляет их пользователю.
-К ним должны быть прикреплены кнопки:
+The bot offers to choose a category of recommendations: movies, books, music.
+After selecting a category, the bot asks for a genre.
+After receiving it, it forms a request and asks ChatGPT for recommendations
+and sends them to the user.
+They should have attached buttons:
 
-"Не нравится", которая делает выбранное произведение неинтересным. Нажатие на
-кнопку генерирует новый ответ, учитывая все неинтересные произведения, введённые пользователем.
+"Don't like", which makes the selected work uninteresting. Pressing the
+button generates a new response, taking into account all uninteresting works entered by the user.
 
-"Закончить", нажатие на которую работает так же, как команда /start.
+"Finish", which works the same as the /start command when pressed.
 
-**"Словарный тренажёр"**
+**"Vocabulary Trainer"**
 
-Бот помогает пользователю расширять словарный запас иностранного языка.
-Может отправлять новое слово с переводом и примерами использования.
-При отправке слово считается выученным. К сообщению должны быть прикреплены
-кнопки "Ещё слово", "Тренироваться", и "Закончить".
-По нажатию на "Тренироваться" бот должен проводить тест по выученным словам
-с валидацией со стороны ChatGPT.
+The bot helps the user expand their foreign language vocabulary.
+It can send a new word with a translation and usage examples.
+When sending, the word is considered learned. The message should have
+attached buttons "Another word", "Practice", and "Finish".
+By pressing "Practice", the bot should conduct a test on learned words
+with validation from ChatGPT.
 
-Тест должен представлять собой перебор всех выученных слов. Каждое такое слово
-должно быть выведено в сообщении. Следующее сообщение пользователя считается
-переводом этого слова. Для валидации правильности можно использовать ChatGPT.
-В конце теста нужно выводить результат в виде количества правильных ответов.
+The test should involve iterating over all learned words. Each such word
+should be displayed in a message. The next user message is considered
+the translation of this word. For validation of correctness, ChatGPT can be used.
+At the end of the test, the result should be displayed as the number of correct answers.
 
-**"Распознавание изображений"**
+**"Image Recognition"**
 
-Бот должен принимать от пользователя изображение и передавать его ChatGPT.
-ChatGPT должен определить, что находится на изображении и описывать в текстовом виде.
-Ответ передать пользователю в текстовом сообщении.
+The bot should accept an image from the user and pass it to ChatGPT.
+ChatGPT should determine what is in the image and describe it in text form.
+The response should be sent to the user as a text message.
 
-**"Помощь с резюме"**
+**"Resume Assistance"**
 
-Бот запрашивает у пользователя информацию об образовании, опыте работы и навыках.
-На основе полученных данных бот генерирует шаблон резюме и отправляет его пользователю.
+The bot asks the user for information about education, work experience, and skills.
+Based on the received data, the bot generates a resume template and sends it to the user.
 
-#### Своя тема
+#### Your Own Topic
 
-Если появилась идея, которую хочется реализовать в проекте, ею можно заменить
-один из выборочных пунктов. Для валидации обратись к Ментору.
+If you have an idea that you want to implement in the project, it can replace
+one of the optional points. For validation, contact the Mentor.
