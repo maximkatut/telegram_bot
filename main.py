@@ -17,6 +17,7 @@ commands = [
     types.BotCommand(command="start", description="Start the bot"),
     types.BotCommand(command="random", description="Random fact"),
     types.BotCommand(command="talk", description="Talk with famous person"),
+    types.BotCommand(command="gpt", description="Ask GPT anything"),
     types.BotCommand(command="quiz", description="Play a quiz game"),
 ]
 

@@ -11,6 +11,9 @@ This project is a Telegram bot integrated with ChatGPT, utilizing the `aiogram` 
 - Adheres to the [PEP8](https://peps.python.org/pep-0008/) coding standard.
 - Designed to be fault-tolerant and robust.
 - Utilizes the `aiogram` library for seamless Telegram API integration.
+- Handles commands such as `/start`, `/random`, `/gpt`, `/talk`, and `/quiz`.
+- Supports dynamic topic selection and quiz functionality with interactive buttons.
+- Manages conversation flow using `FSMContext` for state management.
 
 ## Getting Started
 
@@ -55,10 +58,11 @@ The project can be deployed on various platforms such as ngrok, pythonanywhere, 
 
 ## Additional Features
 
-- Utilizes `ConversationHandler` for managing complex conversations.
+- Utilizes `FSMContext` for managing complex conversations and state transitions.
 - Environment variables are used for storing sensitive information like tokens.
 - Includes logging for better traceability and debugging.
 - The project can be extended with technologies not covered in the first module.
+- Implements a quiz feature with dynamic topic selection and scoring.
 
 ## Contribution
 
